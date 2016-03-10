@@ -1,6 +1,6 @@
 function [ wrongly_labeled ] = Two_Comp_Struct_Check( Data )
 % Checks to make sure that for two
-wrongly_labeled={}
+wrongly_labeled={};
 
 % So many for loops very inefficient checking. Can I do this better?
 

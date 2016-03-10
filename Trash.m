@@ -3,11 +3,12 @@ function [ Data ] = Trash( One_Comp_Data, Two_Comp_Orgs, Structures_List, Enzyme
 %organizations (gal-gal/gal-glcnac etc) and spits out the second
 %compartment pathway/structures
 
-[same_order,index]=Check_Same_Ordering(One_Comp_Data(:,1),Two_Comp_Orgs(:,1));
-Data=Two_Comp_Orgs;
+%[same_order,index]=Check_Same_Ordering(One_Comp_Data(:,1),Two_Comp_Orgs(:,1));
+same_order=1;
+%Data=Two_Comp_Orgs;
                
 if same_order==1
-    for i=3:69
+    for i=23:length(One_Comp_Data)
         if isempty(Two_Comp_Orgs{i,2})
             ans='no second'
         else
