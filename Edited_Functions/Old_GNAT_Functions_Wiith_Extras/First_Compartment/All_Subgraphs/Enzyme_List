@@ -1,0 +1,54 @@
+%Enzyme2:Gal_13_GalNac
+%Enzyme3:GlcNac_13_GalNac
+%Enzyme4:GlcNac_16_GalNac
+%Enzyme5:NeuAC_26_GalNac
+%Enzyme6:Fuc_13_GlcNac
+%Enzyme7:Gal_13_GlcNac
+%Enzyme8:Gal_14_GlcNAc
+%Enzyme9: Fuc_12_Gal
+%Enzyme10: NeuAc_23_Gal
+
+Path1:['NeuAc_23_Gal','Gal_13_GlcNac','GlcNac_13_GalNac'];
+Path2:['NeuAc_23_Gal','Gal_13_GalNac','GlcNac_16_GalNac'];
+Path3:['Fuc_12_Gal','Gal_14_GlcNac','GlcNac_13_GalNac'];
+Path4:['NeuAc_23_Gal','Gal_14_GlcNac','GlcNac_13_GalNac'];
+Path5:['NeuAc_23_Gal','Gal_14_GalNac','GlcNac_16_GalNac'];
+Path6:['Fuc_12_Gal','Gal_13_GlcNac','GlcNac_13_GalNac'];
+Path7:['Fuc_12_Gal','Gal_13_GalNac','GlcNac_16_GalNac'];
+Path8:['Fuc_12_Gal','Gal_14_GlcNAc']
+Path9:['NeuAc_23_Gal','Gal_14_GlcNAc']
+Path10:['Gal_14_GalNac','GlcNac_16_GalNac'];
+Path11:['Gal_13_GlcNac','GlcNac_13_GalNac'];
+Path12:['Gal_14_GalNac','GlcNac_16_GalNac'];
+Path13:[Fuc_13_GlcNac, 'GlcNac_16_GalNac'];
+Path14:[Fuc_13_GlcNac, 'GlcNac_13_GalNac'];
+Path15:['Gal_14_GlcNAc'];
+Path16:['GlcNac_13_GalNac'];
+Path17:['GlcNac_16_GalNac'];
+Path18:['NeuAC_26_GalNac'];
+
+Path1=fliplr[Path1];
+Path2=fliplr[Path2];
+Path3=fliplr[Path3];
+Path4=fliplr[Path4];
+Path5=fliplr[Path5];
+Path6=fliplr[Path6];
+Path7=fliplr[Path7];
+Path8=fliplr[Path8];
+Path9=fliplr[Path9];
+Path10=fliplr[Path10];
+Path11=fliplr[Path11];
+Path12=fliplr[Path12];
+Path13=fliplr[Path13];
+Path14=fliplr[Path14];
+Path15=fliplr[Path15];
+Path16=fliplr[Path16];
+Path17=fliplr[Path17];
+Path18=fliplr[Path18];
+
+Total_Paths=[Path1, Path2, Path3, Path4, Path5, Path6, Path7, Path8, Path9, Path10, Path11, Path12, Path13, Path14, Path15, Path16, Path17, Path18];
+
+if Total_Paths~=[]
+
+for i=1:length(Total_Paths)
+
