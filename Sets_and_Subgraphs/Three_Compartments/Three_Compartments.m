@@ -3,9 +3,9 @@
 clearvars
 
 %Two Compartment organization
-load('U_Common_GlcNac');
-load('GlcNac_Paths');
-Third_Comp_Paths=GlcNac_Paths;
+load('U_Gal_Common');
+load('Gal_Paths');
+Third_Comp_Paths=Gal_Paths;
 
 load('Complete_Linkage_Map');
 Third_Comp_Orgs={};
@@ -23,4 +23,4 @@ for i=1:no2cells
      Third_Comp_Orgs{i,4}=Two_Comp_Unravelled{i,5};
      Third_Comp_Orgs{i,5}=All_Subsets;
 end
-save('Common_GlcNac_GlcNac.mat','Third_Comp_Orgs')
+save('Gal_Common_Gal.mat','Third_Comp_Orgs')

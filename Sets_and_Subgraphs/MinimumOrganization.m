@@ -1,0 +1,17 @@
+function [ Cells ] = MinimumOrganization( List_of_Compartments, Set_of_Paths )
+%Takes in a list of compartments and a set of paths and finds the
+%compartmental organization that has the minimum extra structures
+
+pathIDX=size(List_of_Compartments,2);
+noComp=size(List_of_Compartments,1);
+Cells={};
+
+for i=1:noComp
+    strComp=cellfun(@(x)(mat2str(x)),List_of_Compartments{i,pathIDX},'uniformoutput',false);
+    strPaths=cellfun(@(x)(mat2str(x)),Set_of_Paths,'uniformoutput',false);
+    contained=isequal(strPaths,intersect(strComp,strPaths));
+    if isequal(contained,1)
+        Cells=[Cells;List_Of_Compartments(i,:)];
+    end
+end
+

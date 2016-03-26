@@ -1,19 +1,23 @@
 %Three Comp Paths
 load('Complete_Linkage_Map');
 max_len=15;
-
+%{
 files=dir('Three_Comp_Organizations')
 Files={};
 for i=files
     Files=[Files,files.name]
 end
+%}
 
-for k=15:29
-    fid=Files(k);
-    load(fid{1});
-    FilePath=['Three_Comp_Paths/',fid{1}]
+load('Gal_Gal_Gal.mat')
+
+%for k=15:29
+ %   fid=Files(k);
+  %  load(fid{1});
+   % FilePath=['Three_Comp_Paths/',fid{1}]
+    FilePath=['Three_Comp_Paths/','Gal_Gal_Gal2'];
     Three_Comp_Path=Third_Comp_Orgs;
-    for i=1:size(Third_Comp_Orgs,1)
+    for i=1:5848
         earlyNodes=Third_Comp_Orgs{i,3};
         earlyPaths=Third_Comp_Orgs{i,4};
         if isempty(Third_Comp_Orgs{i,5})
@@ -31,4 +35,4 @@ for k=15:29
         save(FilePath,'Three_Comp_Path')
         i
     end
-end
+%end

@@ -6,13 +6,17 @@ for i=files
 end
 
 for k=3:length(Files)
+    k
     fid=Files(k);
     load(fid{1});
     FilePath=['Three_Comp_Paths_All/',fid{1}];
     nocells=0;
     Three_Comp_Unravelled={};
+    OpenFile=['Three_Comp_Paths/',fid{1}];
+    load(OpenFile)
     for i=1:size(Three_Comp_Path,1)
         if isempty(Three_Comp_Path{i,5})
+            a=i;
         else
             for j=1:size(Three_Comp_Path{i,5},1)
                     nocells=nocells+1;
@@ -24,5 +28,5 @@ for k=3:length(Files)
         end
     end
     i
-    save(FilePath,'Three_Comp_Path')
+    save(FilePath,'Three_Comp_Unravelled')
 end
